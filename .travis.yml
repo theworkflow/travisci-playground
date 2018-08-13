@@ -5,4 +5,4 @@ deploy:
   provider: script
   script: bash bin/deploy.sh
   on:
-    condition: ((tag =~ ^v) AND (branch = master))
+    condition: (($TRAVIS_TAG =~ ^v) AND ($TRAVIS_BRANCH == master))
